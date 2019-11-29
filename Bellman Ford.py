@@ -21,8 +21,8 @@ def BellmanFord(g, inicio):
     pi = [(-1,-1)] * len(g) #cada nodo aun no tiene predecesor
     # se sabe que la distancia del nodo inicio es de 0 ya que estamos ahi
     distancia[inicio] = 0
-    for i in range(len(g) -1): #Recorrido es el numero de nodos
-        for u in range(len(g)): #Numero de vértices
+    for i in range(len(g) -1): #Recorrido es el numero de nodos -1 para el resultado mas optimo
+        for u in range(len(g)):
             for v, w in g[u]:
                 # Si la distancia se ha encontrado y la distancia al nodo es menor a la que ya tenía...
                 if distancia[u] != INF and distancia[u]+w < distancia[v]:
